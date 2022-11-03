@@ -1,6 +1,6 @@
 import './App.css';
-import { Inicio } from './components/Inicio';
-import {NavBar} from './components/NavBar'
+import { Inicio } from './Components/Inicio';
+import {NavBar} from './Components/NavBar'
 
 document.addEventListener("DOMContentLoaded", { NavBar, Inicio});
 
