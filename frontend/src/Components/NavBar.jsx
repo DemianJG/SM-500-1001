@@ -2,9 +2,10 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import '../css/NavBar.css';
+import logo1 from '../media/icon.png';
+import user from '../media/user.png';
 
-
-const NavBar = () => { // 
+export const NavBar = () => { // 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, seScrolled] = useState(false);
 
@@ -27,38 +28,37 @@ const NavBar = () => { //
 
   const title =
     <span >
-      Usuario
+      <img src={user} alt="Usuario" />
     </span>
 
   return ( //
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="home" >
-          Maguey 500
-        </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+          <Navbar.Brand href="home" >
+          <img src={logo1} alt="logo123"/>
+        </Navbar.Brand>
             <Nav.Link href="#inicio" className={activeLink === 'inicio' ? 'active-navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('inicio')}>Inicio</Nav.Link>
             <Nav.Link href="#noti" className={activeLink === 'noti' ? 'active-navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('noti')}>Notificaciones</Nav.Link>
             <Nav.Link href="#esta" className={activeLink === 'esta' ? 'active-navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('esta')}>Estadísticas</Nav.Link>
+            <NavDropdown title={title} id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#administrarP">
+                Administrar perfil
+              </NavDropdown.Item>
+              <NavDropdown.Item href="http://localhost:8000/logout">
+                Cerrar sesión
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
-          <NavDropdown title={title} className="Dropdown align-items-center" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#administrarP">
-              Administrar perfil
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#cerrarsesion">
-              Cerrar sesión
-            </NavDropdown.Item>
-          </NavDropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   )
 } //
 
-export default NavBar;
 
 // 
