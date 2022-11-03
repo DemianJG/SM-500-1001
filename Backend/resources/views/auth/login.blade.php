@@ -10,9 +10,12 @@
     @vite(['resources/js/app.js', 'resources/css/app.css', 'resources/css/formulario.css'])
 </head>
 <body>
+    <header>
+        <img class="logo" src="images/Maguey500.png" alt="MG500">
+    </header>
     <form action="/login" method="POST">
         @csrf
-        <h1 class="title">Inicio</h1>
+        <h1 class="title">Inicio de sesión</h1>
         <label for="">
             <i class="fa-solid fa-user"></i>
             <input type="text" name="username" id="username" placeholder="Nombre de usuario">
