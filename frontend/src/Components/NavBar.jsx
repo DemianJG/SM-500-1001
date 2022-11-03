@@ -43,8 +43,7 @@ export const NavBar = () => { //
               onClick={() => onUpdateActiveLink('inicio')}>Inicio</Nav.Link>
             <Nav.Link href="#noti" className={activeLink === 'noti' ? 'active-navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('noti')}>Notificaciones</Nav.Link>
-            <Nav.Link href="#esta" className={activeLink === 'esta' ? 'active-navbar-link' : 'navbar-link'}
-              onClick={() => onUpdateActiveLink('esta')}>Estadísticas</Nav.Link>
+
             <NavDropdown title={title} id="navbarScrollingDropdown">
               <NavDropdown.Item href="#administrarP">
                 Administrar perfil
