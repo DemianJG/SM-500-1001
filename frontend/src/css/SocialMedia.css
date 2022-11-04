@@ -1,0 +1,45 @@
+.bg-sm{
+    background: #6E3A21 -5.91%
+}
+
+.bg-sm h1{
+    font-size: 60px;
+    color: white;
+}
+
+.sm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    background: #6E3A21 -5.91%;
+    width: 100%;
+}
+
+.tarjeta{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #9e5431;
+}
+
+.image{
+    width: 100%;
+}
+
+/* @media screen and (max-width: 400px) {
+    .sm{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-between;
+        background: #6E3A21 -5.91%;
+    }
+    
+    .tarjeta{
+        margin: 10px;
+        padding: 20px;
+        width: 100px;
+        height: 100px;
+    }
+} */
