@@ -1,8 +1,12 @@
 import './App.css';
-import Cover from './Components/Cover';
-import { Inicio } from './Components/Inicio';
-import {NavBar} from './Components/NavBar'
-import { Social } from './Components/SocialMedia';
+import { Client } from './components/clients';
+import Cover from './components/Cover';
+import { Inicio } from './components/Inicio';
+import {NavBar} from './components/NavBar'
+import ShowUsers from './components/ShowUsers';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CreateUser from './components/CreateUsers';
+import EditUser from './components/EditUser';
 
 document.addEventListener("DOMContentLoaded", { NavBar, Inicio, Cover});
 
@@ -21,7 +25,14 @@ function App() {
       <NavBar />
       <Inicio />
       <Cover />
-      {/* <Social /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={ <ShowUsers/> } />
+          <Route path='/create' element={<CreateUser />} />
+          <Route path='/edit' element={<EditUser />} />
+        </Routes>
+      </BrowserRouter> 
+      <Client />
     </div>
   );
 }
